@@ -20,7 +20,7 @@ public class Solution extends Thread {
 
     private static final Logger log = Logger.getLogger(Solution.class.getName());
 
-    private static boolean debugSession = true;
+    private static volatile boolean debugSession = true;
 
     public Solution() {
         this(DEFAULT_JAVARUSH_THREAD_NAME);
@@ -42,6 +42,7 @@ public class Solution extends Thread {
         new Solution().start();
     }
 
+    @Override
     public void run() {
         boolean debug = debugSession;
         if (debug) {
