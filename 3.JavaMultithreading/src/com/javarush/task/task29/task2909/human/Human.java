@@ -11,6 +11,8 @@ public class Human {
     protected String name;
     protected int course;
 
+    private List<Human> children = new ArrayList<>();
+
     protected int[] size;
 
     protected boolean isSoldier;
@@ -69,6 +71,18 @@ public class Human {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public List<Human> getChildren() {
+        return Collections.unmodifiableList(children);
+    }
+
+    public void addChild(Human child) {
+        children.add(child);
+    }
+
+    public void removeChild(Human child) {
+        children.remove(child);
     }
 
     public void printSize() {
