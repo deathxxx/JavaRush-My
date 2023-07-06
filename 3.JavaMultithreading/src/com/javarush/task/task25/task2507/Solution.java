@@ -18,8 +18,14 @@ public class Solution extends Thread {
         this.in = socket.getInputStream();
     }
 
+    @Override
     public void interrupt() {
-        //implement logic here
+        try {
+            socket.close();
+        } catch (IOException ignored) {
+        } finally {
+            super.interrupt();
+        }
     }
 
     public void run() {
