@@ -5,11 +5,11 @@ package com.javarush.task.task28.task2801;
 */
 
 public class Solution {
-    public static enum E1 {A, B, C, Y}
+    public enum E1 {A, B, C, Y}
 
-    public static enum E2 {D, E, F}
+    public enum E2 {D, E, F}
 
-    public static enum E3 {D, E, F}
+    public enum E3 {D, E, F}
 
     public static void main(String[] args) {
         Solution.switchTest(E1.C);
@@ -23,6 +23,15 @@ public class Solution {
     }
 
     public static void switchTest(Enum obj) {
-        //add your code here
+        String className = obj.getClass().getSimpleName();
+        switch (className) {
+            case "E1":
+            case "E2":
+                System.out.println("it's " + className + "." + obj.name());
+                break;
+            default:
+                System.out.println("undefined");
+                break;
+        }
     }
 }
