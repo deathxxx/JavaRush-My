@@ -8,15 +8,15 @@ ThreadLocalRandom
 
 public class Solution {
     public static int getRandomIntegerBetweenNumbers(int from, int to) {
-        return ThreadLocalRandom.current().nextInt(from, to + 1);
+        return 0;
     }
 
     public static double getRandomDouble() {
-        return ThreadLocalRandom.current().nextDouble();
+        return 0;
     }
 
     public static long getRandomLongBetween0AndN(long n) {
-        return ThreadLocalRandom.current().nextLong(n + 1);
+        return 0;
     }
 
     public static void main(String[] args) {
