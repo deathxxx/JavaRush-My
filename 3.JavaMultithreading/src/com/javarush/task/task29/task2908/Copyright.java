@@ -31,9 +31,7 @@ public class Copyright implements Computable<Copyright.Period, String> {
             Period period = (Period) o;
 
             if (firstYear != period.firstYear) return false;
-            if (secondYear != period.secondYear) return false;
-
-            return true;
+            return secondYear == period.secondYear;
         }
 
         @Override
