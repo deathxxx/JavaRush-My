@@ -12,16 +12,16 @@ import java.util.logging.Logger;
 */
 
 public class Solution {
-    final int NUMBER_OF_THREADS = 3; // 3 треда будет обрабатывать нашу очередь
-    final int MAX_BATCH_SIZE = 100; // Будем вытаскивать по 100 сообщений
+    final int NUMBER_OF_THREADS = 3; //3 треда будет обрабатывать нашу очередь
+    final int MAX_BATCH_SIZE = 100; //будем вытаскивать по 100 сообщений
 
     private Logger logger = Logger.getLogger(Solution.class.getName());
-    private BlockingQueue messageQueue = new LinkedBlockingQueue(); // Тут будут храниться все сообщения
+    private BlockingQueue messageQueue = new LinkedBlockingQueue();//тут будут храниться все сообщения
 
     private BlockingQueue fakeDatabase = new LinkedBlockingQueue();
 
     public static void main(String[] args) throws InterruptedException {
-        // Статики во многих местах неуместны, поэтому помещаем все данные в поля класса,
+        // статики во многих местах неуместны, поэтому помещаем все данные в поля класса,
         // затем создаем объект и вызываем его метод
         Solution solution = new Solution();
 
@@ -46,7 +46,7 @@ public class Solution {
             @Override
             public void run() {
                 for (int i = 0; i < 100000; i++) {
-                    messageQueue.add(String.valueOf(i--));
+                    messageQueue.add(String.valueOf(i));
                 }
             }
         }.start();
@@ -65,7 +65,7 @@ public class Solution {
                 public void run() {
                     while (true) {
                         try {
-                            messageQueue.drainTo(messageQueue, MAX_BATCH_SIZE);
+                            messageQueue.drainTo(batch, MAX_BATCH_SIZE);
                             persistData(batch);
                             batch.clear();
                             Thread.sleep(1);
@@ -79,8 +79,8 @@ public class Solution {
     }
 
     private void persistData(Collection batch) {
-        // Представим, что тут мы коннектимся к базе данных, и сохраняем данные в нее
-        // Сохранение данных по 1 записи тратит много ресурсов, поэтому делают батчем (группой по несколько)
+        //представим, что тут мы коннектимся к базе данных, и сохраняем данные в нее
+        //сохранение данных по 1 записи тратит много ресурсов, поэтому делают батчем (группой по несколько)
         fakeDatabase.addAll(batch);
     }
 
