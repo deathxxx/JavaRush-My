@@ -10,15 +10,20 @@ public class Solution {
     private static int numberA;
     private static int numberB;
 
-    public static String recursion(int a, int b) {
-        if (a > b) {
-            return a + " " + recursion(a - 1, b);
-        } else {
-            if (a == b) {
-                return Integer.toString(a);
+    public static String getAllNumbersBetween(int a, int b) {
+        StringBuilder sb = new StringBuilder();
+        if (a < b) {
+            for (int i = a; i <= b; i++) {
+                sb.append(i);
+                sb.append(" ");
             }
-            return a + " " + recursion(a + 1, b);
+        } else {
+            for (int i = a; i >= b; i--) {
+                sb.append(i);
+                sb.append(" ");
+            }
         }
+        return sb.toString().trim();
     }
 
     public static void main(String[] args) {
