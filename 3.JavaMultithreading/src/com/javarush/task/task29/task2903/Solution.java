@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 */
 
 public class Solution {
-    public static final ThreadLocalRandom random = ThreadLocalRandom.current();
+    public static final ThreadLocalRandom RANDOM = ThreadLocalRandom.current();
 
     public static void main(String[] args) {
         ConcurrentMap<Integer, String> concurrentMap = new ConcurrentHashMap<>();
@@ -32,12 +32,13 @@ public class Solution {
             @Override
             public void run() {
                 final String name = "Thread #" + i;
-                int randomInt = random.nextInt(20);
+                int randomInt = RANDOM.nextInt(20);
                 String text = name + " вставил запись для " + randomInt;
 
                 // previousEntry is null for new entries
                 /* Instead of setting it to null, call concurrentMap.someMethod(randomInt, text) */
-                String previousEntry = null;
+                String previousEntry = concurrentMap.putIfAbsent(randomInt, text);
+
 
                 if (previousEntry != null) {
                     System.out.println(name + " хочет обновить " + randomInt + ", однако уже " + previousEntry);
