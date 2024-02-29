@@ -12576,3 +12576,6 @@ java.lang.NoSuchFieldException: myOptionsButtons
 2024-02-29 13:14:02 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
 2024-02-29 13:14:13 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
 2024-02-29 13:14:14 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-02-29 13:16:53 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-02-29 13:16:54 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-02-29 13:16:58 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
