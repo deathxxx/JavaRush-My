@@ -16226,3 +16226,7 @@ java.lang.StringIndexOutOfBoundsException: begin -1, end 58, length 58
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+2024-03-02 12:02:43 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-03-02 12:02:45 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-03-02 12:02:48 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-03-02 12:02:49 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :/Users/dex/IdeaProjects/JavaRush/JavaRushTasks/3.JavaMultithreading/src/com/javarush/task/task30/task3003
