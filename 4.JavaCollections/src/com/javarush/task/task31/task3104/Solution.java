@@ -40,4 +40,18 @@ public class Solution extends SimpleFileVisitor<Path> {
     public List<String> getFailed() {
         return failed;
     }
+
+    @Override
+    public FileVisitResult visitFile(Path path, BasicFileAttributes basicFileAttributes) throws IOException {
+        if (path.toString().endsWith(".rar") || path.toString().endsWith(".zip")) {
+            archived.add(path.toString());
+        }
+        return super.visitFile(path, basicFileAttributes);
+    }
+
+    @Override
+    public FileVisitResult visitFileFailed(Path path, IOException e) throws IOException {
+        failed.add(path.toString());
+        return FileVisitResult.SKIP_SUBTREE;
+    }
 }
