@@ -21824,3 +21824,7 @@ com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize va
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+2024-11-09 20:10:30 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-11-09 20:10:32 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-11-09 20:10:37 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-11-09 20:10:37 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :/Users/dex/IdeaProjects/JavaRush/JavaRushTasks/3.JavaMultithreading/src/com/javarush/task/task30/task3005
