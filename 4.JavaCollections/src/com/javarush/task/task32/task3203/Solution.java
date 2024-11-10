@@ -14,6 +14,8 @@ public class Solution {
     }
 
     public static String getStackTrace(Throwable throwable) {
-        return null;
+        StringWriter writer = new StringWriter();
+        throwable.printStackTrace(new PrintWriter(writer));
+        return writer.toString();
     }
 }
