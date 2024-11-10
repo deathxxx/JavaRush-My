@@ -14,7 +14,14 @@ public class Solution {
     }
 
     public static String decode(StringReader reader, int key) throws IOException {
-
-        return null;
+        StringBuilder builder = new StringBuilder();
+        int ch1;
+        if (reader != null) {
+            while ((ch1 = reader.read()) != -1) {
+                char ch = (char) ch1;
+                builder.append((char) (ch + key));
+            }
+        }
+        return builder.toString();
     }
 }
