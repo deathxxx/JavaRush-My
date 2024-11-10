@@ -50,7 +50,7 @@ public class Space {
                     //Если "стрелка вправо" - сдвинуть фигурку вправо
                 else if (event.getKeyCode() == KeyEvent.VK_RIGHT)
                     ship.moveRight();
-                    //Если "пробел" - стреляем
+                    //Если "пробел" - запускаем шарик
                 else if (event.getKeyCode() == KeyEvent.VK_SPACE)
                     ship.fire();
             }
@@ -151,7 +151,7 @@ public class Space {
     }
 
     /**
-     * Удаляем умершие объекты (бомбы, ракеты, НЛО) из списков
+     * Удаляем умерсшие объекты (бомбы, ракеты, НЛО) из списков
      */
     public void removeDead() {
         for (BaseObject object : new ArrayList<BaseObject>(bombs)) {
@@ -172,7 +172,7 @@ public class Space {
 
     /**
      * Отрисовка всех объектов игры:
-     * а) заполняем весь холст точками.
+     * а) заполняем весь холст точесками.
      * б) отрисовываем все объекты на холст.
      */
     public void draw(Canvas canvas) {
