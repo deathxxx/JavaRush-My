@@ -24,6 +24,12 @@ public class Solution {
     }
 
     public static SomeInterfaceWithMethods getProxy() {
-        return null;
+        SomeInterfaceWithMethods original = new SomeInterfaceWithMethodsImpl();
+
+        ClassLoader classLoader = SomeInterfaceWithMethods.class.getClassLoader();
+        Class[] interfaces = {SomeInterfaceWithMethods.class};
+        CustomInvocationHandler handler = new CustomInvocationHandler(original);
+
+        return (SomeInterfaceWithMethods) Proxy.newProxyInstance(classLoader, interfaces, handler);
     }
 }
