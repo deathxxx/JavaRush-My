@@ -31,10 +31,13 @@ public class Solution {
 
     @JsonAutoDetect
     public static class Cat {
+        @JsonProperty(value = "wildAnimal")
         public String name;
 
+        @JsonIgnore
         public int age;
 
+        @JsonProperty(value = "over")
         public int weight;
 
         Cat() {
