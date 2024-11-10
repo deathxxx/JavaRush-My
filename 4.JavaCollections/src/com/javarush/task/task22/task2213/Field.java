@@ -106,7 +106,7 @@ public class Field {
      */
     public void removeFullLines() {
         //Создаем список для хранения линий
-        ArrayList<int[]> lines = new ArrayList<int[]>();
+        ArrayList<int[]> lines = new ArrayList<>();
 
         //Копируем все неполные линии в список.
         for (int i = 0; i < height; i++) {
