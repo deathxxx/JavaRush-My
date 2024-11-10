@@ -50,7 +50,7 @@ public class Space {
                     //Если "стрелка вправо" - сдвинуть фигурку вправо
                 else if (event.getKeyCode() == KeyEvent.VK_RIGHT)
                     ship.moveRight();
-                    //Если "пробел" - стреляем
+                    //Если "пробел" - запускаем шарик
                 else if (event.getKeyCode() == KeyEvent.VK_SPACE)
                     ship.fire();
             }
@@ -84,14 +84,20 @@ public class Space {
      * Двигаем все объекты игры
      */
     public void moveAllItems() {
-        //нужно получить список всех игрвых объектов и у каждого вызвать метод move().
+        for (BaseObject object : getAllItems()) {
+            object.move();
+        }
     }
 
     /**
      * Метод возвращает общий список, который содержит все объекты игры
      */
     public List<BaseObject> getAllItems() {
-        //нужно создать новый список и положить в него все игровые объекты.
+        ArrayList<BaseObject> list = new ArrayList<>(ufos);
+        list.add(ship);
+        list.addAll(bombs);
+        list.addAll(rockets);
+        return list;
     }
 
     /**
@@ -99,6 +105,7 @@ public class Space {
      */
     public void createUfo() {
         //тут нужно создать новый НЛО.
+        //1 раз за 10 вызовов метода.
     }
 
     /**
@@ -120,15 +127,16 @@ public class Space {
     }
 
     /**
-     * Удаляем умершие объекты (бомбы, ракеты, НЛО) из списков
+     * Удаляем умерсшие объекты (бомбы, ракеты, НЛО) из списков
      */
     public void removeDead() {
-        //тут нужно удалить все умершие объекты из списков (кроме космического корабля)
+        //тут нужно удалить все умершие объекты из списков.
+        //Кроме космического корабля - по нему определяем ищет еще игра или нет.
     }
 
     /**
      * Отрисовка всех объектов игры:
-     * а) заполняем весь холст точками.
+     * а) заполняем весь холст точесками.
      * б) отрисовываем все объекты на холст.
      */
     public void draw(Canvas canvas) {
