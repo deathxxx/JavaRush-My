@@ -24,12 +24,11 @@ public class Solution {
         }
     }
 
-    public static void main(String args[]) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         helper.startTime();
 
         Monkey monkey = new Monkey("Simka");
-
-        //Add reference here
+        WeakReference<Monkey> reference = new WeakReference<>(monkey);        //Add reference here
 
         helper.callGC();
 
