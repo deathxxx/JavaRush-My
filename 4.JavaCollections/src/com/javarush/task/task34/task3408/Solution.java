@@ -14,7 +14,7 @@ public class Solution {
 
         SomeValue value = new SomeValue(someKey);
 
-        Cache<SomeKey, SomeValue> cache = new Cache<>();
+        Cache<SomeKey, SomeValue> cache = new Cache<SomeKey, SomeValue>();
         cache.put(value);
 
         SomeValue existingValueFromCache = cache.getByKey(someKey, SomeValue.class);
@@ -24,11 +24,6 @@ public class Solution {
         System.out.println(newValueFromCache);
 
         System.out.println(cache.size());
-        /* Expected output:
-        SomeValue{myKey=SomeKey{name='test'}}
-        SomeValue{myKey=SomeKey{name='testNew'}}
-        2
-         */
     }
 
     public static class SomeKey {
