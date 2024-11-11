@@ -24,12 +24,11 @@ public class Solution {
         }
     }
 
-    public static void main(String args[]) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         helper.startTime();
 
         Monkey monkey = new Monkey("Simka");
-
-        //Add reference here
+        SoftReference<Monkey> reference = new SoftReference<>(monkey);        //Add reference here
 
         helper.callGC();
 
