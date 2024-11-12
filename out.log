@@ -46061,3 +46061,7 @@ java.lang.NoSuchFieldException: myOptionsButtons
 2024-11-12 14:30:27 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
 2024-11-12 14:30:29 INFO  ApacheHttpClient.completed(32) - responseCode = 200
 2024-11-12 14:30:29 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-11-12 14:31:19 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-11-12 14:31:21 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-11-12 14:31:26 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-11-12 14:31:26 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :/Users/dex/IdeaProjects/JavaRush/JavaRushTasks/4.JavaCollections/src/com/javarush/task/task35/task3508
