@@ -18,6 +18,7 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V> {
         this.capacity = capacity;
     }
 
+    //returns null if the object wasn't found in the cache
     public V find(K key) {
         return super.get(key);
     }
