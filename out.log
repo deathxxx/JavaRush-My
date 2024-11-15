@@ -8937,3 +8937,4 @@ java.lang.StringIndexOutOfBoundsException: begin -1, end 58, length 58
 2024-11-15 22:27:22 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
 2024-11-15 22:27:23 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
 2024-11-15 22:27:27 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-11-15 22:27:52 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
