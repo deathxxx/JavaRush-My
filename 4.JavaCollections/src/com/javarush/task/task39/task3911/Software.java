@@ -23,6 +23,27 @@ public class Software {
     }
 
     public boolean rollback(int rollbackVersion) {
+        boolean isRollbackPositionFound = false;
+        List<Integer> versionsToDelete = new LinkedList<>();
+        for (int version : versionHistoryMap.keySet()) {
+            if (version == rollbackVersion) {
+                isRollbackPositionFound = true;
+                continue;
+            }
+            if (isRollbackPositionFound) {
+                versionsToDelete.add(version);
+            }
+        }
+
+        if (!isRollbackPositionFound) {
+            return false;
+        }
+
+        for (int version : versionsToDelete) {
+            versionHistoryMap.remove(version);
+        }
+
+        currentVersion = rollbackVersion;
         return true;
     }
 }
