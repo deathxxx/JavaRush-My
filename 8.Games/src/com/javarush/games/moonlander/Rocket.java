@@ -1,6 +1,6 @@
 package com.javarush.games.moonlander;
 
-import com.javarush.engine.cell.Color;
+import com.javarush.engine.cell.*;
 
 public class Rocket extends GameObject {
     private double speedY = 0;
@@ -22,10 +22,8 @@ public class Rocket extends GameObject {
 
         if (isLeftPressed) {
             speedX -= boost;
-            x += speedX;
         } else if (isRightPressed) {
             speedX += boost;
-            x += speedX;
         } else if (speedX > slowdown) {
             speedX -= slowdown;
         } else if (speedX < -slowdown) {
