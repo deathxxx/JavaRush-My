@@ -4169,3 +4169,7 @@ java.lang.NoSuchFieldException: myOptionsButtons
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
 2025-01-29 09:38:41 INFO  ApacheHttpClient.completed(32) - responseCode = 200
 2025-01-29 09:38:41 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 09:39:12 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2025-01-29 09:39:13 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2025-01-29 09:39:16 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2025-01-29 09:39:16 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
