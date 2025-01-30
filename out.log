@@ -8493,3 +8493,39 @@ java.lang.NoSuchFieldException: myOptionsButtons
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
 2025-01-29 17:34:43 INFO  ApacheHttpClient.completed(32) - responseCode = 200
 2025-01-29 17:34:44 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:24 INFO  ProjectStartupHandler.projectClosing(155) - ---------- Project closed ----------
+
+2025-01-29 17:48:26 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:26 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:26 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:27 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:27 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:28 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:28 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:28 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:29 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:30 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:30 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:31 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:32 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:32 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:33 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:33 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:34 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:34 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:35 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:36 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:36 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2025-01-29 17:48:36 INFO  PluginProjectService.dispose(41) - PluginProjectService for disposed.
+2025-01-30 09:46:09 INFO  ProjectStartupHandler.runActivity(74) - ---------- Project opened ----------
+2025-01-30 09:46:09 INFO  ProjectStartupHandler.runActivity(75) - ---------- Version 4.03 ----------
+
+2025-01-30 09:46:09 INFO  ApacheHttpClient.isSessionAppropriateWithSecretKey(602) - Waiting for server response.
+2025-01-30 09:46:09 INFO  ApacheHttpClient.isSessionAppropriateWithSecretKey(602) - Waiting for server response.
+2025-01-30 09:46:10 INFO  ApacheHttpClient.refreshUserInfo(305) - responseCode = 200
+2025-01-30 09:46:10 INFO  ApacheHttpClient.refreshUserInfo(311) - User information received.
+2025-01-30 09:46:10 INFO  ApacheHttpClient.startGA(36) - GAService started.
+2025-01-30 09:46:19 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2025-01-30 09:46:19 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2025-01-30 09:46:22 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2025-01-30 09:46:22 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
