@@ -11728,3 +11728,7 @@ java.lang.StringIndexOutOfBoundsException: begin -1, end 58, length 58
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+2025-01-30 10:59:08 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2025-01-30 10:59:08 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2025-01-30 10:59:11 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2025-01-30 10:59:11 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
