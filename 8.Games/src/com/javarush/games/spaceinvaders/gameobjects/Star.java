@@ -9,6 +9,7 @@ public class Star extends GameObject {
         super(x, y);
     }
 
+    @Override
     public void draw(Game game) {
         game.setCellValueEx((int) x, (int) y, Color.NONE, STAR_SIGN, Color.WHITE, 100);
     }

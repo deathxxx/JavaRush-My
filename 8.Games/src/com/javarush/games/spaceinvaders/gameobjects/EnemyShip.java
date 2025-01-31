@@ -8,7 +8,7 @@ public class EnemyShip extends Ship {
 
     public EnemyShip(double x, double y) {
         super(x, y);
-        setStaticView(ShapeMatrix.ENEMY);
+        this.setStaticView(ShapeMatrix.ENEMY);
     }
 
     public void move(Direction direction, double speed) {

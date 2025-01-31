@@ -114,11 +114,12 @@ public class SpaceInvadersGame extends Game {
         for (Bullet bullet : playerBullets) {
             bullet.draw(this);
         }
+
     }
 
     private void drawField() {
-        for (int y = 0; y < HEIGHT; y++) {
-            for (int x = 0; x < WIDTH; x++) {
+        for (int x = 0; x < WIDTH; x++) {
+            for (int y = 0; y < HEIGHT; y++) {
                 setCellValueEx(x, y, Color.BLACK, "");
             }
         }
@@ -140,7 +141,6 @@ public class SpaceInvadersGame extends Game {
     private void moveSpaceObjects() {
         enemyFleet.move();
         playerShip.move();
-
         for (Bullet enemyBullet : enemyBullets) {
             enemyBullet.move();
         }
@@ -166,7 +166,9 @@ public class SpaceInvadersGame extends Game {
 
     private void check() {
         playerShip.verifyHit(enemyBullets);
+
         score += enemyFleet.verifyHit(playerBullets);
+
         enemyFleet.deleteHiddenShips();
         removeDeadBullets();
 
@@ -177,6 +179,7 @@ public class SpaceInvadersGame extends Game {
         if (enemyFleet.getBottomBorder() >= playerShip.y) {
             playerShip.kill();
         }
+
 
         if (enemyFleet.getShipsCount() == 0) {
             playerShip.win();
@@ -201,4 +204,5 @@ public class SpaceInvadersGame extends Game {
             stopGame(playerShip.isAlive);
         }
     }
+
 }
